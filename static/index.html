@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caçador de Nuvens (Vue) ☁️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div id="app" class="container">
+    <h1>☁️ Que nuvem é essa?</h1>
+    <p class="subtitle">Tire uma foto ou envie uma imagem do céu.</p>
+
+    <div v-if="!resultado" class="upload-area">
+        <input type="file" id="fileElem" accept="image/*" @change="selecionarImagem">
+        <label class="button" for="fileElem">📷 Escolher Foto</label>
+
+        <div id="gallery" v-if="previewUrl">
+            <img :src="previewUrl" alt="Preview da nuvem">
+        </div>
+    </div>
+
+    <button
+            v-if="previewUrl && !loading && !resultado"
+            class="btn-primary active"
+            @click="analisarNuvem">
+        Identificar Nuvem
+    </button>
+
+    <div v-if="loading" class="loading-area">
+        <div class="spinner"></div>
+        <p>Consultando o meteorologista IA...</p>
+    </div>
+
+    <div v-if="resultado" class="resultado-area">
+        <h2>Resultado:</h2>
+        <div id="texto-resposta" v-html="resultadoFormatado"></div>
+
+        <button class="btn-secondary" @click="resetar">Nova Consulta</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
