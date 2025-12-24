@@ -22,7 +22,7 @@ func AnalisarNuvem(imgData []byte) (string, error) {
 	}
 	defer client.Close()
 
-	model := client.GenerativeModel("gemma-3-12b")
+	model := client.GenerativeModel("models/gemma-3-12b-it")
 
 	prompt := []genai.Part{
 		genai.ImageData("jpeg", imgData),
