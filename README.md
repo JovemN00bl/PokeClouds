@@ -6,7 +6,7 @@
 ![Go Version](https://img.shields.io/badge/go-1.23+-00ADD8?logo=go&logoColor=white)
 ![AI Model](https://img.shields.io/badge/AI-Gemma%203%2012b-4285F4?logo=google&logoColor=white)
 
-## 📖 Sobre o Projeto
+##  Sobre o Projeto
 
 O **PokeClouds** é uma aplicação web que permite aos usuários fazer upload de fotos do céu para identificar tipos de nuvens. O sistema atua como um "meteorologista digital", analisando a imagem e retornando:
 - O nome científico da nuvem (ex: *Mammatus*, *Cumulonimbus*).
@@ -20,7 +20,7 @@ Este projeto foi desenvolvido como um MVP para explorar a integração entre **B
 ![Screenshot do Projeto](static/print-demo.png)
 
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * **Linguagem:** [Go (Golang)](https://go.dev/) - Pela performance e robustez no back-end.
 * **Inteligência Artificial:** [Google Gemma 3 (12b)](https://ai.google.dev/gemma) - Modelo open-source multimodal capaz de interpretar imagens e texto.
@@ -28,11 +28,11 @@ Este projeto foi desenvolvido como um MVP para explorar a integração entre **B
 * **Front-end:** HTML5, CSS3 e JavaScript (Vanilla).
 * **Hospedagem:** Render.
 
-## ⚙️ Arquitetura e Desafios
+## ⚙ Arquitetura e Desafios
 
 Um dos principais desafios técnicos deste projeto foi a escolha do modelo de IA. Inicialmente projetado para usar o **Gemini**, o projeto migrou para o **Gemma 3 12b** para otimizar os limites de requisição (Rate Limits), permitindo um uso massivo gratuito sem perder a capacidade de visão computacional (multimodalidade).
 
-## 🔧 Como rodar localmente
+##  Como rodar localmente
 
 ### Pré-requisitos
 * [Go](https://go.dev/dl/) instalado.
@@ -63,7 +63,7 @@ Um dos principais desafios técnicos deste projeto foi a escolha do modelo de IA
 5.  **Acesse**
     Abra seu navegador em `http://localhost:8080`
 
-## ☁️ Exemplo de Uso
+##  Exemplo de Uso
 
 **Prompt do Sistema:**
 > "Atue como um meteorologista especialista. Identifique qual tipo de nuvem é esta na imagem. Diga o nome científico..."
@@ -71,10 +71,4 @@ Um dos principais desafios técnicos deste projeto foi a escolha do modelo de IA
 **Resposta da IA (Exemplo):**
 > "Analisando a imagem, podemos identificar as nuvens como **Mammatus**. A principal característica são as protuberâncias arredondadas..."
 
-## 🤝 Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.

@@ -25,9 +25,9 @@ func TestHomepageHandler(t *testing.T) {
 		t.Errorf("O handler retornou o código errado: recebeu %v, queria %v ", status, http.StatusOK)
 	}
 
-	expected := "PokeClouds"
+	expected := "Caçador de Nuvens"
 	if !strings.Contains(rr.Body.String(), expected) {
-		t.Errorf("O handler retornou um body inesperado: não encontrei '%v'", expected)
+		t.Errorf("O handler retornou um body inesperado: não encontrei '%v'.", expected)
 	}
 
 }
